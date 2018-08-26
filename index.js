@@ -41,7 +41,7 @@ class Customer {
     })
   }
   totalSpent(){
-    const reducer = (acc, curr) => (acc += curr),0;
+    const reducer = (acc, curr) => (acc += curr), 0;
     return this.meals().reduce(reducer);
   }
 }
