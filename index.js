@@ -49,4 +49,9 @@ class Delivery {
     this.customerId = customerId;
     store.deliveries.push(this);
   }
+  meal(){
+    return store.meals.filter(meal => {
+      return meal.id == this.mealId;
+    })
+  }
 }
