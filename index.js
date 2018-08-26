@@ -22,9 +22,10 @@ class Neighborhood {
     });
   }
   meals(){
-    return this.deliveries().map(delivery => {
-      return delivery.neighborhoodId === this.id;
-    })
+    const allMeals = this.customers().map(customer => customer.meals());
+    const mergedMeals = [].concat.apply([], allMeals);
+    return [...new Set(merged)];
+
   }
 }
 
