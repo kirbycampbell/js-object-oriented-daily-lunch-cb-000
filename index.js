@@ -17,7 +17,7 @@ class Neighborhood {
     })
   }
   customers(){
-    return store.customers.map(customer => {
+    return store.customers.filter(customer => {
       return customer.neighborhoodId == this.id;
     })
   }
