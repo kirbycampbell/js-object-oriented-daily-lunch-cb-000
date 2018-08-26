@@ -22,8 +22,8 @@ class Neighborhood {
     });
   }
   meals(){
-    return this.deliveries().find(delivery => {
-      return delivery.meal();
+    return this.deliveries().map(delivery => {
+      return delivery.customer();
     })
   }
 }
