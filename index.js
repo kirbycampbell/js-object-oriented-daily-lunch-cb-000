@@ -12,10 +12,11 @@ class Neighborhood {
     store.neighborhoods.push(this);
   }
   deliveries(){
-    return store.deliveries.map(delivery => {
-      return delivery.neighborhoodIdid == this.id
+    return store.deliveries.filter(delivery => {
+      return delivery.neighborhoodId == this.id
     })
   }
+
 }
 
 class Customer {
