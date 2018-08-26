@@ -36,8 +36,8 @@ class Customer {
     })
   }
   meals(){
-    return store.meals.filter(meal => {
-      return meal.customerId == this.id;
+    return this.deliveries().map(delivery => {
+      return delivery.meal();
     })
   }
 }
@@ -56,8 +56,8 @@ class Meal {
   }
 
   customers(){
-    return store.customers.find(delivery => {
-      return delivery.mealId == this.id;
+    return store.customers.find(customer => {
+      return customer.mealId == this.id;
     })
   }
 }
