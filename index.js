@@ -23,7 +23,7 @@ class Neighborhood {
   }
   meals(){
     return this.deliveries().find(delivery => {
-      return delivery.neighborhood();
+      return delivery.neighborhoodId == this.id;
     })
   }
 }
