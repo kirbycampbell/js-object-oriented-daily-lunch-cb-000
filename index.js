@@ -27,7 +27,7 @@ class Neighborhood {
     //const mergedMeals = [].concat.apply([], allMeals);
     //return [...new Set(mergedMeals)];
     return this.customers().map(customer => {
-      return customer.meals();
+      console.log(customer.meals());
     })
   }
 }
