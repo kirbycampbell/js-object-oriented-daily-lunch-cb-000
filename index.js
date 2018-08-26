@@ -56,7 +56,7 @@ class Meal {
   }
 
   customers(){
-    return store.customers.filter(customer => {
+    return store.customers.map(customer => {
       return customer.mealId == this.id;
     })
   }
