@@ -59,8 +59,8 @@ class Meal {
       return delivery.customer();
     })
   }
-  byPrice(){
-
+  static byPrice(){
+    return store.meals((a, b) => a.price < b.price);
   }
 }
 
