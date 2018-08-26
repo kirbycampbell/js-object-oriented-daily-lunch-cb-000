@@ -21,30 +21,12 @@ class Neighborhood {
       return customer.neighborhoodId == this.id;
     });
   }
-
   meals(){
-    //const allMeals = this.customers().map(customer => customer.meals());
-    //const mergedMeals = [].concat.apply([], allMeals);
-    //return [...new Set(mergedMeals)];
-    const mergedMeals = []
-    const allMeals = this.customers().map(customer => {
-      return customer.meals();
+    return this.deliveries().map(delivery => {
+      return delivery.neighborhoodId == this.id;
     })
-    return mergedMeals.concat([], allMeals);
   }
 }
-//customers(){
-//  return this.deliveries().map(delivery => {
-//    return delivery.customer();
-//  })
-//} *********************
-
-
-
-
-
-
-
 
 class Customer {
   constructor(name, neighborhoodId){
@@ -114,3 +96,4 @@ class Delivery {
     })
   }
 }
+z
