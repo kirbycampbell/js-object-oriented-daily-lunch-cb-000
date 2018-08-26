@@ -52,6 +52,11 @@ class Delivery {
   meal(){
     return store.meals.find(meal => {
       return meal.id == this.mealId;
-    });
+    })
+  };
+  customer(){
+    return store.customers.find(meal => {
+      return customer.id == this.customerId;
+    })
   }
 }
