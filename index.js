@@ -56,7 +56,7 @@ class Meal {
   }
 
   customers(){
-    this.deliveries().map(delivery => {
+    return this.deliveries().map(delivery => {
       return delivery.customer();
     })
   }
