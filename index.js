@@ -22,6 +22,7 @@ class Neighborhood {
     });
   }
   meals(){
+    let yes;
     return this.deliveries().map(delivery => {
       yes = delivery.neighborhoodId == this.id;
       return yes.pop();
