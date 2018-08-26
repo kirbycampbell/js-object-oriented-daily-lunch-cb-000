@@ -25,7 +25,7 @@ class Neighborhood {
     let yes;
     return this.deliveries().map(delivery => {
       yes = delivery.neighborhoodId == this.id;
-      return yes.splice(1, 1);
+      return yes.splice;
     })
   }
 }
