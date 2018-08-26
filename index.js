@@ -14,12 +14,12 @@ class Neighborhood {
   deliveries(){
     return store.deliveries.filter(delivery => {
       return delivery.neighborhoodId == this.id;
-    })
+    });
   }
   customers(){
     return store.customers.filter(customer => {
       return customer.neighborhoodId == this.id;
-    })
+    });
   }
 }
 
@@ -50,8 +50,8 @@ class Delivery {
     store.deliveries.push(this);
   }
   meal(){
-    return store.meals.map(meal => {
+    return store.meals.find(meal => {
       return meal.id == this.mealId;
-    })
+    });
   }
 }
