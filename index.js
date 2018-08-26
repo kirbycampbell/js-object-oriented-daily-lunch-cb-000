@@ -60,7 +60,7 @@ class Delivery {
     })
   };
   neighborhood(){
-    return store.neighborhoods.map(neighborhood => {
+    return store.neighborhoods.filter(neighborhood => {
       return neighbordhood.id == this.neighborhoodId;
     })
   }
