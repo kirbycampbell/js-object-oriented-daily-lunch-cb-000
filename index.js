@@ -40,6 +40,10 @@ class Customer {
       return delivery.meal();
     })
   }
+  totalSpent(){
+    const reducer = (acc, curr) => acc + curr;
+    return this.meals().reduce(reducer);
+  }
 }
 
 class Meal {
