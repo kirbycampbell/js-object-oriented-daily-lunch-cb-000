@@ -22,7 +22,7 @@ class Neighborhood {
     });
   }
   meals(){
-    return this.deliveries().find(delivery => {
+    return this.deliveries().map(delivery => {
       return delivery.neighborhoodId == this.id;
     })
   }
