@@ -25,7 +25,7 @@ class Neighborhood {
     let yes;
     return this.deliveries().map(delivery => {
       yes = delivery.neighborhoodId == this.id;
-      return yes.pop;
+      return yes.pop(1);
     })
   }
 }
