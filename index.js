@@ -11,6 +11,11 @@ class Neighborhood {
     this.name = name;
     store.neighborhoods.push(this);
   }
+  deliveries(){
+    return store.deliveries.map(delivery => {
+      return delivery.neighborhoodIdid == this.id
+    })
+  }
 }
 
 class Customer {
