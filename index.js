@@ -21,13 +21,28 @@ class Neighborhood {
       return customer.neighborhoodId == this.id;
     });
   }
-  meals(){
-    const allMeals = this.customers().map(customer => customer.meals());
-    const mergedMeals = [].concat.apply([], allMeals);
-    return [...new Set(mergedMeals)];
 
+  meals(){
+    //const allMeals = this.customers().map(customer => customer.meals());
+    //const mergedMeals = [].concat.apply([], allMeals);
+    //return [...new Set(mergedMeals)];
+    return this.customers().map(customer => {
+      return customer.meals();
+    })
   }
 }
+//customers(){
+//  return this.deliveries().map(delivery => {
+//    return delivery.customer();
+//  })
+//} *********************
+
+
+
+
+
+
+
 
 class Customer {
   constructor(name, neighborhoodId){
